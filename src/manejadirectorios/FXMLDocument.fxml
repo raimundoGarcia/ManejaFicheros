@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="panelBase" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="581.0" prefWidth="534.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manejadirectorios.FXMLDocumentController">
+   <children>
+      <Pane fx:id="panelRadio" layoutX="16.0" layoutY="87.0" prefHeight="200.0" prefWidth="502.0">
+         <children>
+            <RadioButton fx:id="listarContenido" layoutX="35.0" layoutY="14.0" mnemonicParsing="false" text="1. Listar contenido del directorio">
+               <toggleGroup>
+                  <ToggleGroup fx:id="rbListados" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="listarFiltrado" layoutX="35.0" layoutY="53.0" mnemonicParsing="false" text="2. Listar contenido filtrado" toggleGroup="$rbListados" />
+            <RadioButton fx:id="listarLectura" layoutX="35.0" layoutY="92.0" mnemonicParsing="false" text="3. Listar archivos de sólo lectura" toggleGroup="$rbListados" />
+            <RadioButton fx:id="listarTamaño" layoutX="35.0" layoutY="130.0" mnemonicParsing="false" text="4. Listar archivos filtrados por tamaño" toggleGroup="$rbListados" />
+            <RadioButton fx:id="crearNuevo" layoutX="35.0" layoutY="169.0" mnemonicParsing="false" text="5. Crear archivo nuevo" toggleGroup="$rbListados" />
+            <TextField fx:id="fieldFiltrado" layoutX="251.0" layoutY="49.0" prefHeight="25.0" prefWidth="131.0" promptText="escribir cadena filtrado" />
+            <TextField fx:id="fieldTamaño" layoutX="273.0" layoutY="126.0" prefHeight="25.0" prefWidth="93.0" promptText="bytes" />
+            <TextField fx:id="fieldNuevoArchivo" layoutX="199.0" layoutY="165.0" prefHeight="25.0" prefWidth="280.0" promptText="nombre del archivo" />
+         </children>
+      </Pane>
+      <TextField fx:id="fiendRuta" layoutX="117.0" layoutY="27.0" prefHeight="25.0" prefWidth="349.0" />
+      <Label layoutX="14.0" layoutY="31.0" text="Ruta de carpeta" />
+      <Label layoutX="28.0" layoutY="64.0" text="Seleccionar opción">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="botonAbrir" layoutX="474.0" layoutY="27.0" mnemonicParsing="false" onAction="#abrirRuta" text="Abrir" textFill="#f80000" />
+      <Button fx:id="botonEjecutar" layoutX="407.0" layoutY="300.0" mnemonicParsing="false" onAction="#ejecutar" prefHeight="25.0" prefWidth="106.0" text="Ejecutar Opción" textFill="#fc0101" />
+      <TreeView fx:id="fieldTree" layoutX="34.0" layoutY="338.0" prefHeight="200.0" prefWidth="470.0" />
+      <Button fx:id="botonSalir" layoutX="476.0" layoutY="548.0" mnemonicParsing="false" onAction="#salir" text="Salir" textFill="#f80202" />
+   </children>
+</Pane>
